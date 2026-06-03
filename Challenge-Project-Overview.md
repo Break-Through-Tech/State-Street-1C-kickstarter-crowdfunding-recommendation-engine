@@ -18,35 +18,45 @@
 
 ---
 
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
+## 📋 BTT Internal Evaluation Notes
+*(This section is for BTT staff only — remove before sharing with students)*
 
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The tech stack primarily uses Python, which aligns well with student skills. |
+| Data Readiness | 🟢 | The dataset is publicly available, under 1GB, and formatted for easy use (CSV/TSV), minimizing preparation time. |
+| Resource Check | 🟢 | No specialized hardware or proprietary software is required; students can use Google Colab for free-tier access. |
+
+**Student Fit Score:** 8/10  
+**Technical Depth Score:** 7/10  
+**Overall Recommendation:** APPROVE
+
+**Advisor Feedback Draft:**
+The project's focus on predicting Kickstarter success aligns with real-world applications and is a valuable learning experience. However, consider the following technical adjustments: 1) Include a more comprehensive exploratory analysis phase to derive insights from the data that may inform modeling choices better. 2) Ensure students engage with a variety of classification and regression models to understand the impact of different algorithms on outcomes. Moving forward, encourage the team to clarify how they will effectively integrate evaluation metrics into their modeling process.
 
 ---
 
-# [Project Title]
+# Kickstarter-Crowdfunding-Recommendation-Engine
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Title, Email]  
+**Company / Org:** State Street  
+**Challenge Advisor:** Parth Rana, parthrana34@gmail.com  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
-## 🏢 About [Company / Org Name]
+## 🏢 About State Street
 
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+State Street is a financial services and banking holding company specializing in investment management and servicing. We operate at the crossroads of the finance industry, offering innovative solutions and insights.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+The aim of this project is to predict the success or failure of a Kickstarter campaign at launch time.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+Accuracy and Precision
 
 ### Project Milestones
 
@@ -54,9 +64,9 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
+| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
+| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -64,27 +74,31 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
-**Location:** [Link to dataset or instructions for accessing it]
+**Name and Source:** Publicly available Kickstarter dataset from Kaggle  
+**Format:** CSV, TSV, Excel  
+**Size:** under 1gb  
+**Location:** [Kickstarter Projects Dataset](https://www.kaggle.com/datasets/kemical/kickstarter-projects)
 
 ### Key Details
-- [Brief description of what's in the data]
-- [Any known limitations or preprocessing needed]
+- Publicly available Kickstarter dataset (Numerical / Quantitative, Text) in CSV/TSV and Excel formats. 
+- Limited number of missing entries; explore EDA for better understanding.
 - [Link to data dictionary or documentation, if available]
 
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
+**ML Problem Type:** Classification, Regression
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- Machine Learning Algorithms
+- Classification
+- Regression
+- Google Colab
 
 **Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- Accuracy
+- Precision/Recall
 
 ---
 
@@ -93,19 +107,20 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+- [Understanding Kickstarter and Its Campaigns](https://www.kickstarter.com/help/handbook)
+- [An Analysis of Kickstarter Campaigns](https://towardsdatascience.com/an-analysis-of-kickstarter-campaigns-e1e4c5c20502)
 
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
+- [Machine Learning Classification Techniques](https://www.coursera.org/learn/classification)
+- [Google Colab for Machine Learning](https://colab.research.google.com/notebooks/welcome.ipynb)
 
 **Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+- [Kickstarter Success Prediction Github Repository](https://github.com/example/kickstarter-success-prediction)
+- [Sample Implementation for Classification](https://github.com/example/classification-example)
 
 **Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+- [Video: How to Launch a Successful Kickstarter Campaign](https://www.youtube.com/watch?v=example)
+- [Podcast on Crowdfunding Strategies](https://www.examplepodcast.com)
 
 *Feel free to explore beyond these, and share anything interesting you find with me!*
 
@@ -114,13 +129,13 @@ The following resources will help your team understand the problem space and pot
 ## 🤝 How We'll Work Together
 
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** [e.g., Slack (Break Through Tech workspace) or email]  
-**Response time:** [e.g., Within 48 hours on weekdays]  
+**Communication:** Slack (Break Through Tech workspace)  
+**Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** [e.g., Google Colab, VS Code]
-- **Collaboration:** [e.g., GitHub, Notion]
-- **Virtual Meetings:** [e.g., Zoom, Google Meet]
+- **Coding:** Google Colab
+- **Collaboration:** GitHub, Notion
+- **Virtual Meetings:** Zoom, Google Meet
 
 ---
 
@@ -130,10 +145,12 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session B). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+---
