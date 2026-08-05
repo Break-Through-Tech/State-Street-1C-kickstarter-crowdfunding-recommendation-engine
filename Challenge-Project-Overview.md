@@ -40,6 +40,7 @@ The project's focus on predicting Kickstarter success aligns with real-world app
 
 **Company / Org:** State Street  
 **Challenge Advisor:** Parth Rana, parthrana34@gmail.com  
+**AI Studio Coach:** Darshan Ugale, darshan.ugale@breakthroughtech.org    
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
