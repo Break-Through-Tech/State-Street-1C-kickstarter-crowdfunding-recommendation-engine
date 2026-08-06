@@ -64,10 +64,15 @@ Accuracy and Precision
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
 | Month | Milestone | Key Activities |
-|-------|-----------|----------------|
-| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
-| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
-| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
+| :--- | :--- | :--- |
+| September | Data Processing, Preprocessing & Baseline Modeling | • Ingest and clean the Kickstarter projects dataset (handling missing values, datetime parsing, and goal/currency standardizations).<br>• Perform Exploratory Data Analysis (EDA) on success rates, goal distributions, and category-level trends.<br>• Engineer baseline features (campaign duration, goal amount in USD, launch month/day, primary category).<br>• Train baseline classifiers (Logistic Regression / Decision Trees) to predict campaign success or failure. |
+| October | Feature Engineering, Advanced ML & Recommendation Engine | • Extract textual features from campaign titles and blurbs using TF-IDF or text embeddings.<br>• Train advanced models (XGBoost, Random Forest, LightGBM) to forecast campaign funding success.<br>• Perform hyperparameter tuning and cross-validation, evaluating via Precision, Recall, F1-Score, and ROC-AUC.<br>• Build recommendation logic to suggest optimal campaign settings (ideal goal amount, launch timing, duration). |
+| November / December | Model Explainability, Interactive UI & Deliverables | • Apply SHAP value interpretability to isolate top features driving project funding success.<br>• Build an interactive Streamlit web application for creators to input project parameters and receive recommendations.<br>• Finalize clean, reproducible GitHub repository, documentation, and final presentation deck. |
+
+### Stretch Goals
+* **Interactive Campaign "What-If" Simulator:** Build a scenario-testing tool within the Streamlit UI enabling creators to tweak goals, launch timing, and duration to see real-time success probability updates.
+* **NLP Blurb & Description Analysis:** Incorporate fine-tuned transformer embeddings (e.g., Sentence-Transformers) to analyze campaign blurb sentiment and readability scores as predictive signals.
+* **Unsupervised Campaign Clustering:** Apply clustering techniques (K-Means or DBSCAN) to discover natural groupings of campaigns based on funding profiles and risk metrics.
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
