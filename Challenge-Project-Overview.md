@@ -36,7 +36,7 @@ The project's focus on predicting Kickstarter success aligns with real-world app
 
 ---
 
-# Kickstarter-Crowdfunding-Recommendation-Engine
+# Kickstarter Crowdfunding Recommendation Engine
 
 **Company / Org:** State Street  
 **Challenge Advisor:** Parth Rana, parthrana34@gmail.com  
@@ -54,7 +54,7 @@ State Street is a financial services and banking holding company specializing in
 ## 🎯 The Challenge
 
 ### Project Summary
-The aim of this project is to predict the success or failure of a Kickstarter campaign at launch time.
+The aim of this project is to predict the success or failure of a Kickstarter campaign at launch time. The aim of this project was to predict the success or failure of a Kickstarter campaign at launch time.
 
 ### Success Criteria
 Accuracy and Precision
@@ -63,16 +63,9 @@ Accuracy and Precision
 
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
-| Month | Milestone | Key Activities |
-| :--- | :--- | :--- |
-| September | Data Processing, Preprocessing & Baseline Modeling | • Ingest and clean the Kickstarter projects dataset (handling missing values, datetime parsing, and goal/currency standardizations).<br>• Perform Exploratory Data Analysis (EDA) on success rates, goal distributions, and category-level trends.<br>• Engineer baseline features (campaign duration, goal amount in USD, launch month/day, primary category).<br>• Train baseline classifiers (Logistic Regression / Decision Trees) to predict campaign success or failure. |
-| October | Feature Engineering, Advanced ML & Recommendation Engine | • Extract textual features from campaign titles and blurbs using TF-IDF or text embeddings.<br>• Train advanced models (XGBoost, Random Forest, LightGBM) to forecast campaign funding success.<br>• Perform hyperparameter tuning and cross-validation, evaluating via Precision, Recall, F1-Score, and ROC-AUC.<br>• Build recommendation logic to suggest optimal campaign settings (ideal goal amount, launch timing, duration). |
-| November / December | Model Explainability, Interactive UI & Deliverables | • Apply SHAP value interpretability to isolate top features driving project funding success.<br>• Build an interactive Streamlit web application for creators to input project parameters and receive recommendations.<br>• Finalize clean, reproducible GitHub repository, documentation, and final presentation deck. |
-
-### Stretch Goals
-* **Interactive Campaign "What-If" Simulator:** Build a scenario-testing tool within the Streamlit UI enabling creators to tweak goals, launch timing, and duration to see real-time success probability updates.
-* **NLP Blurb & Description Analysis:** Incorporate fine-tuned transformer embeddings (e.g., Sentence-Transformers) to analyze campaign blurb sentiment and readability scores as predictive signals.
-* **Unsupervised Campaign Clustering:** Apply clustering techniques (K-Means or DBSCAN) to discover natural groupings of campaigns based on funding profiles and risk metrics.
+- Pre-processing of the data set from Kickstarter
+- Exploratory Data Ananlysis (EDA)
+- Machine Learning Algorithms
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -86,8 +79,8 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 **Location:** [Kickstarter Projects Dataset](https://www.kaggle.com/datasets/kemical/kickstarter-projects)
 
 ### Key Details
-- Publicly available Kickstarter dataset (Numerical / Quantitative, Text) in CSV/TSV and Excel formats. 
-- Limited number of missing entries; explore EDA for better understanding.
+- [Brief description of what's in the data]
+- [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
 ---
@@ -97,14 +90,10 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 **ML Problem Type:** Classification, Regression
 
 **Recommended Libraries:**
-- Machine Learning Algorithms
-- Classification
-- Regression
-- Google Colab
+- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
 
 **Evaluation Metrics:**
-- Accuracy
-- Precision/Recall
+- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
 
 ---
 
@@ -113,20 +102,19 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [Understanding Kickstarter and Its Campaigns](https://www.kickstarter.com/help/handbook)
-- [An Analysis of Kickstarter Campaigns](https://towardsdatascience.com/an-analysis-of-kickstarter-campaigns-e1e4c5c20502)
+- [e.g., Link to an article or blog post about the problem domain]
+- [e.g., Link to an industry report or case study]
 
 **Technical Tutorials:**
-- [Machine Learning Classification Techniques](https://www.coursera.org/learn/classification)
-- [Google Colab for Machine Learning](https://colab.research.google.com/notebooks/welcome.ipynb)
+- [e.g., Link to a free tutorial on the ML technique(s) involved]
+- [e.g., Link to documentation for a key library or tool]
 
 **Code Examples:**
-- [Kickstarter Success Prediction Github Repository](https://github.com/example/kickstarter-success-prediction)
-- [Sample Implementation for Classification](https://github.com/example/classification-example)
+- [e.g., Link to a relevant GitHub repo]
+- [e.g., Link to a sample implementation or starter code]
 
 **Other:**
-- [Video: How to Launch a Successful Kickstarter Campaign](https://www.youtube.com/watch?v=example)
-- [Podcast on Crowdfunding Strategies](https://www.examplepodcast.com)
+- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
 
 *Feel free to explore beyond these, and share anything interesting you find with me!*
 
@@ -134,14 +122,19 @@ The following resources will help your team understand the problem space and pot
 
 ## 🤝 How We'll Work Together
 
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack (Break Through Tech workspace)  
-**Response time:** Within 48 hours on weekdays  
+**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
 
-**Recommended Tools:**
-- **Coding:** Google Colab
-- **Collaboration:** GitHub, Notion
-- **Virtual Meetings:** Zoom, Google Meet
+ **Other ways to reach out to me with questions:** 
+* [e.g., Your team's channel within Break Through Tech’s Discord space]
+* [e.g., Email; please copy your teammates and AI Studio Coach]
+* [e.g., Request a team check-in on Zoom]
+* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+
+> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+
+**Recommended free coding / collaboration tools**
+* […]
+* […]
 
 ---
 
@@ -151,12 +144,10 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I'm excited to work with you!
+I’m excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
-
----
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
