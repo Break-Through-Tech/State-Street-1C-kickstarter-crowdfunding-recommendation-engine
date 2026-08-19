@@ -1,71 +1,38 @@
----
-
-> ## Challenge Advisor: Update & Finalize Your Project Overview
->
-> > 💡 **These grey text instructions are just for you, the team's Challenge Advisor; please delete them once you have completed the steps below.**
->
-> We've pre-populated this Challenge Project Overview page — which is what will be shared with your Break Through Tech student team in August — using the details from your submission form. You should have received an email inviting you to join this repo as a Collaborator, enabling you to add files and make edits.
-> 
-> In order for your project to be finalized and assigned to a team, please:
-> 1. **Review all sections below** and update or expand any content as needed, making sure to address the SME Feedback in the section immediately below. Look for square brackets to find the places below that require additional inputs from you (e.g., "About [Company / Org Name]").
-> 2. **Add your dataset** to the [data folder](data) in this repo.
-> 3. **Close the Issue assigned to you in this repo** to let us know that you have made your edits and the overview page is ready for final review. You can do this by going to the _Issues_ tab in the top left section of the menu above, add a comment that says "CA review complete", and click the button to Close the Issue. 
->
-> If you're unfamiliar with how to edit a page like this in GitHub, check out [this tutorial](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/handson/edit-readme.html) for a quick overview (start with step 2 and only edit this page), and [this guide](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/markdown.html) on how to use Markdown to compose text.
->
->
-> ❌ Remember that this is a public repo. Do NOT include: Proprietary data, PII, API keys, credentials, or anything confidential.
-
----
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | 🟢 | The tech stack primarily uses Python, which aligns well with student skills. |
-| Data Readiness | 🟢 | The dataset is publicly available, under 1GB, and formatted for easy use (CSV/TSV), minimizing preparation time. |
-| Resource Check | 🟢 | No specialized hardware or proprietary software is required; students can use Google Colab for free-tier access. |
-
-**Student Fit Score:** 8/10  
-**Technical Depth Score:** 7/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-The project's focus on predicting Kickstarter success aligns with real-world applications and is a valuable learning experience. However, consider the following technical adjustments: 1) Include a more comprehensive exploratory analysis phase to derive insights from the data that may inform modeling choices better. 2) Ensure students engage with a variety of classification and regression models to understand the impact of different algorithms on outcomes. Moving forward, encourage the team to clarify how they will effectively integrate evaluation metrics into their modeling process.
-
----
-
 # Kickstarter Crowdfunding Recommendation Engine
 
 **Company / Org:** State Street  
 **Challenge Advisor:** Parth Rana, parthrana34@gmail.com  
-**AI Studio Coach:** Darshan Ugale, darshan.ugale@breakthroughtech.org    
+**AI Studio Coach:** Darshan Ugale, darshan.ugale@breakthroughtech.org  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
 ## 🏢 About State Street
 
-State Street is a financial services and banking holding company specializing in investment management and servicing. We operate at the crossroads of the finance industry, offering innovative solutions and insights.
+State Street is a financial services and banking holding company specializing in investment management and servicing. The company operates at the intersection of financial services, data, technology, and analytics, providing an appropriate context for exploring how machine learning can support data-driven decision-making.
+
+Note: This challenge does not contain any data from State Street.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-The aim of this project is to predict the success or failure of a Kickstarter campaign at launch time. The aim of this project was to predict the success or failure of a Kickstarter campaign at launch time.
+
+The goal of this project is to develop a **Kickstarter Crowdfunding Recommendation Engine** that predicts whether a crowdfunding campaign is likely to be successful or fail using information available around campaign launch. The project should go beyond prediction by identifying important factors associated with campaign outcomes and exploring how those insights could support actionable recommendations for campaign creators.
 
 ### Success Criteria
-Accuracy and Precision
+
+Success should be evaluated using multiple classification metrics rather than accuracy alone. The target is to achieve approximately **80% or better accuracy**, while also demonstrating strong **Precision, Recall, F1 Score, and ROC-AUC** performance and providing meaningful, interpretable insights into the factors driving predictions.
 
 ### Project Milestones
 
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
-- Pre-processing of the data set from Kickstarter
-- Exploratory Data Ananlysis (EDA)
-- Machine Learning Algorithms
+- **Milestone 1 — Data Preparation:** Clean and preprocess the Kickstarter dataset, filter the relevant campaign outcomes, prepare U.S.-based records, handle missing values, and encode categorical variables.
+- **Milestone 2 — Exploratory Data Analysis:** Investigate relationships between campaign success and factors such as goal, duration, updates, location, category, subcategory, and reward levels. Identify patterns that can inform model development.
+- **Milestone 3 — Machine Learning:** Establish baseline and advanced classification models, perform feature selection/engineering, compare model performance, and analyze model interpretability.
+- **Milestone 4 — Recommendation Prototype:** Explore how predictions and insights from successful campaigns could be translated into actionable recommendations for campaigns predicted to be at risk.
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -73,76 +40,116 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** Publicly available Kickstarter dataset from Kaggle  
-**Format:** CSV, TSV, Excel  
-**Size:** under 1gb  
-**Location:** [Kickstarter Projects Dataset](https://www.kaggle.com/datasets/kemical/kickstarter-projects)
+**Name and Source:** Kickstarter Projects dataset, publicly available through Kaggle  
+**Format:** Structured tabular dataset (CSV)  
+**Original Size:** Approximately 45,957 observations and 17 columns  
+**Source:** [Kickstarter dataset on Kaggle](https://www.kaggle.com/parienza/kickstarter)
 
 ### Key Details
-- [Brief description of what's in the data]
-- [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
+
+- The dataset contains Kickstarter project information including **Project ID, Project Name, URL, Category, Location, Status, Goal, Pledge, Funded Percentage, Backers, Funded Date, Levels, Reward Levels, Updates, and Comments**.
+- The original data contains multiple campaign statuses. For the project's binary classification objective, the source project filtered the data to **successful and failed** campaigns and removed live, suspended, and canceled campaigns.
+- The project further focused on campaigns in the **United States**, splitting location information into City and State, and removed records with missing values. The resulting dataset used in the original project contained approximately **38,491 records and 18 columns**.
+- Students should independently review the raw dataset, validate the preprocessing assumptions, and document each transformation so that the final modeling dataset is reproducible.
+- Potential data-quality considerations include missing values, categorical variables, inconsistent category labels, and the need to ensure that features used for prediction are appropriate for the intended prediction point.
+- The original project used campaign attributes including **goal, duration, updates, levels, city, state, category, and subcategory** as important predictive variables.
 
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** Classification, Regression
+**ML Problem Type:** Supervised learning — binary classification.
 
-**Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+### Recommended Models and Libraries
 
-**Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- **pandas / NumPy:** Data loading, cleaning, transformation, and numerical analysis.
+- **scikit-learn:** Preprocessing, train/test splitting, Logistic Regression, Random Forest, K-Nearest Neighbors, feature selection, and model evaluation.
+- **XGBoost or LightGBM:** Optional advanced tree-based models for comparison with the baseline models.
+- **matplotlib / seaborn / Plotly:** Exploratory analysis and visualization.
+- **SHAP:** Optional explainability tool for understanding model predictions and feature contributions.
+
+### Suggested Modeling Strategy
+
+Start with an interpretable baseline such as **Logistic Regression**, then compare it with **Random Forest** and one or more gradient-boosted tree models. K-Nearest Neighbors can also be included as a benchmark. Students should investigate whether feature engineering, feature selection, class balancing, and hyperparameter tuning materially improve results.
+
+### Evaluation Metrics
+
+Evaluate models using:
+
+- **Accuracy**
+- **Precision**
+- **Recall / Sensitivity**
+- **F1 Score**
+- **ROC-AUC**
+- **Confusion Matrix**
+
+The original project found Random Forest to be the strongest of the three initial models, with approximately **80.2% accuracy** and an **F1 score of 0.834**. These results should be treated as a historical benchmark rather than a guaranteed target; students should reproduce and critically evaluate the results using a sound validation methodology.
 
 ---
 
 ## 📚 Resources to Get Started
 
-The following resources will help your team understand the problem space and potential technical approaches for this project:
+The following resources will help your team understand the problem space and potential technical approaches for this project.
 
-**Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+### Background Reading
 
-**Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
+- [Kickstarter](https://www.kickstarter.com/) — Background on the crowdfunding platform and campaign model.
+- [Predicting the Success of Kickstarter Campaigns](https://towardsdatascience.com/predicting-the-success-of-kickstarter-campaigns-3f4a976419b9) — Background reading related to Kickstarter campaign prediction.
 
-**Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+### Dataset and Documentation
 
-**Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
+- [Kickstarter dataset on Kaggle](https://www.kaggle.com/parienza/kickstarter) — Public dataset used in the original project.
+- Review the dataset columns and metadata on Kaggle before beginning preprocessing.
 
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+### Technical Documentation
+
+- [scikit-learn documentation](https://scikit-learn.org/stable/) — Classification, preprocessing, feature selection, and evaluation.
+- [pandas documentation](https://pandas.pydata.org/docs/) — Data manipulation and analysis.
+- [XGBoost documentation](https://xgboost.readthedocs.io/) — Optional gradient-boosting implementation.
+- [SHAP documentation](https://shap.readthedocs.io/) — Optional model explainability.
+
+### Code and Collaboration
+
+- Use the repository's GitHub Issues and Projects features to document tasks, experiments, questions, and decisions.
+- Keep preprocessing, modeling, evaluation, and visualization code reproducible and clearly documented.
+
+*Feel free to explore beyond these resources and share anything interesting you find with the team.*
 
 ---
 
 ## 🤝 How We'll Work Together
 
-**Official check-ins:** During our biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month)
+**Official check-ins:** During the biweekly 45-minute AI Studio Lab Section meeting block (2nd and 4th week of every month).
 
- **Other ways to reach out to me with questions:** 
-* [e.g., Your team's channel within Break Through Tech’s Discord space]
-* [e.g., Email; please copy your teammates and AI Studio Coach]
-* [e.g., Request a team check-in on Zoom]
-* [Note: I will aim to respond within 48 hours. Please reach out to your AI Studio Coach with urgent questions.]
+**Other ways to reach out to me with questions:**
 
-> 💡 **Challenge Advisor: Please update the above based on your availability and preference. If you are not able to answer questions or meet with fellows outside of the biweekly Lab Section check-ins, simply write in "N/A (only available during the official check-in times)"**
+- **Email:** Parth Rana — parthrana34@gmail.com
+- Please copy your teammates and AI Studio Coach on project-related questions.
+- Additional team check-ins can be requested when needed and subject to availability.
+- I will aim to respond within **48 hours**. Please reach out to your AI Studio Coach with urgent questions.
 
-**Recommended free coding / collaboration tools**
-* […]
-* […]
+### Recommended Free Coding / Collaboration Tools
+
+- **GitHub:** Use GitHub for source control, collaboration, documentation, issues, and project tracking. Each student should work on a separate branch and use pull requests to merge completed work into the main branch.
+- **GitHub Projects:** Use a Kanban-style board to organize weekly tasks, assign ownership, and track progress across the three-month project.
+- **VS Code / Jupyter:** Recommended environments for Python development and exploratory analysis.
+- **Google Colab:** Optional free cloud-based environment for students who need additional compute resources.
+- **Google Drive / Dropbox:** Optional for sharing supplementary documents or files that do not belong in the GitHub repository.
+
+### Suggested Working Framework
+
+Use lightweight **Agile/Kanban practices**: break milestones into small tasks, assign clear owners, maintain a visible backlog, review progress during check-ins, and document important modeling decisions. Regular commits and peer code reviews are encouraged.
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Review this overview document** and note any questions for our first meeting
-2. **Begin reviewing the dataset** using the link above
-3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+1. **Review this overview document** and note any questions for our first meeting.
+2. **Download and inspect the Kickstarter dataset** from Kaggle.
+3. **Create or review the GitHub Projects board** and divide the milestones into weekly tasks.
+4. Establish a reproducible data-preprocessing workflow and document the assumptions behind each transformation.
+5. Begin with exploratory data analysis before selecting and tuning the final machine learning models.
+6. Read the [GitHub Projects documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
 I’m excited to work with you!
 
@@ -150,4 +157,4 @@ I’m excited to work with you!
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session C). 
+Please bring any questions to our first meeting during the week of **August 24th** (Break Through Tech’s Bridge to Studio — Session C).
