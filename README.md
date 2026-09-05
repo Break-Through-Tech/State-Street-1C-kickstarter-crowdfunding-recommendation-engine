@@ -6,16 +6,15 @@
 
 ### 👥 **Team Members**
 
+
 **Example:**
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Taylor Nguyen    | @taylornguyen | Data exploration, visualization, overall project coordination            |
-| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
-
+| Anna Sehgal    | @annasehgal | Data exploration, visualization, overall project coordination            |
+| Zasha Benites   | @    | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Jake Park     | @ | Data preprocessing, feature engineering, data validation                 |
+| Priya Rana     | @       | Model selection, hyperparameter tuning, model training and optimization  |
 ---
 
 ## 🎯 **Project Highlights**
