@@ -1,2 +1,2 @@
-boxsdk==10.14.0
+boxsdk>=10
 python-dotenv
