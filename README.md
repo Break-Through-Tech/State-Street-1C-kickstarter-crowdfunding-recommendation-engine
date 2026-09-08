@@ -11,8 +11,8 @@ Project overview here
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
 | Anna Sehgal    | @annasehgal | Data exploration, visualization, overall project coordination            |
-| Zasha Benites   | @    | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Jake Park     | @ | Data preprocessing, feature engineering, data validation                 |
+| Zasha Benites   | @zm-michelle    | Data collection, exploratory data analysis (EDA), dataset documentation  |
+| Jake Park     | @jakeparkbuilds | Data preprocessing, feature engineering, data validation                 |
 | Priya Rana     | @       | Model selection, hyperparameter tuning, model training and optimization  |
 ---
 
