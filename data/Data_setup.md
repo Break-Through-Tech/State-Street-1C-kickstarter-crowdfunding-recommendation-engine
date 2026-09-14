@@ -163,13 +163,23 @@ notebooks/
 
 ### Notebook workflow
 
-**`01_load_and_explore_data.ipynb`**
+**`00_load_data.ipynb`**
 
-Loads and explores the raw dataset. This includes checking:
+Loads the raw dataset and performs basic loading and validation checks, including:
+
+* Verifying the raw dataset exists
+* Loading the CSV
+* Checking dataset dimensions
+* Confirming column names
+* Verifying the dataset is not empty
+* Documenting known data-loading issues
+
+**`01_explore_data.ipynb`**
+
+Explores the raw dataset before cleaning. This includes:
 
 * Dataset dimensions
-* Column names
-* Data types
+* Column names and data types
 * Missing values
 * Duplicate rows
 * Descriptive statistics
@@ -178,7 +188,7 @@ Loads and explores the raw dataset. This includes checking:
 
 **`02_clean_data.ipynb`**
 
-Handles data-quality issues such as:
+Handles data-quality issues identified during EDA, including:
 
 * Missing values
 * Invalid values
@@ -191,22 +201,43 @@ The cleaned dataset should be saved separately under:
 data/Processed-Data/
 ```
 
-**`03_feature_engineering.ipynb`**
+**`03_preprocess_data.ipynb`**
 
-Creates the features used for modeling, including:
+Prepares the cleaned dataset for modeling, including:
 
-* Categorical transformations
-* Numerical normalization or standardization
-* Non-leaking interaction features
+* Standardizing categorical variables
+* Normalizing or standardizing numerical features
+* Applying consistent preprocessing for the team
 
-**`04_modeling.ipynb`**
+**`04_feature_engineering.ipynb`**
+
+Creates new non-leaking features for modeling, including:
+
+* Feature transformations
+* Interaction features
+* Other features derived from relationships between existing variables
+
+**`05_modeling.ipynb`**
 
 Uses the processed dataset for:
 
 * Train/test splitting
 * Baseline modeling
+* Training machine learning models
+* Comparing models
+
+**`06_evaluation_and_tuning.ipynb`**
+
+Evaluates and improves model performance through:
+
 * Model evaluation
-* Model comparison
+* Performance metrics
+* Hyperparameter tuning
+* Model comparison and selection
+
+**`07_interpretability.ipynb`**
+
+Analyzes model behavior and feature importance to help understand and communicate model predictions.
 
 ## Important data workflow rules
 
