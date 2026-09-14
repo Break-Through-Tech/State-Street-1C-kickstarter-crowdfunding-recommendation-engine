@@ -63,7 +63,15 @@ if __name__ == "__main__":
         data_file = get_datafile(service)
         
         print(f"Found file: {data_file['name']}")
-        local_path = Path(__file__).resolve().parent.parent / "data" / "DSI_kickstarterscrape_dataset.csv"
+        #local_path = Path(__file__).resolve().parent.parent / "data" / "DSI_kickstarterscrape_dataset.csv"
+        local_path = (
+                Path(__file__).resolve().parent.parent 
+                / "data"
+                / "Raw-data"
+                / "DSI_kickstarterscrape_dataset.csv"
+                )
+
+        local_path.parent.mkdir(parents=True, exist_ok=True)
         download_csv_data(service, local_path)
         print(f"Downloaded file to: {local_path}")
 
