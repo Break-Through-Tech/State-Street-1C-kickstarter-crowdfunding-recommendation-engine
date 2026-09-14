@@ -3,3 +3,15 @@ __pycache__/
 .ipynb_checkpoints/
 .box_token
 .venv
+# Google Drive OAuth credentials
+credentials.json
+token.json
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+# Local data
+data/*.csv
+data/*.zip

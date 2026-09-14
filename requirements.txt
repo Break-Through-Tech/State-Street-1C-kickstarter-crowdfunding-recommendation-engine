@@ -1,3 +1,6 @@
-boxsdk>=10
 python-dotenv
 flask
+pandas
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
