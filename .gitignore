@@ -15,8 +15,6 @@ env/
 # Local data
 data/*.csv
 data/*.zip
-data/
-data/*
 *.parquet
 *.json
 *.pkl
