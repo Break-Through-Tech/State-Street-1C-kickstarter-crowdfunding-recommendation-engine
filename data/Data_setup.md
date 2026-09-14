@@ -155,11 +155,16 @@ The project notebooks are organized by stage:
 
 ```text
 notebooks/
-├── 01_load_and_explore_data.ipynb
+├── 00_load_data.ipynb
+├── 01_explore_data.ipynb
 ├── 02_clean_data.ipynb
-├── 03_feature_engineering.ipynb
-└── 04_modeling.ipynb
+├── 03_preprocess_data.ipynb
+├── 04_feature_engineering.ipynb
+├── 05_modeling.ipynb
+├── 06_evaluation_and_tuning.ipynb
+└── 07_interpretability.ipynb
 ```
+
 
 ### Notebook workflow
 
