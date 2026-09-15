@@ -1,10 +1,12 @@
 import os
+import io
 from pathlib import Path
+import codecs
 from dotenv import load_dotenv
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaIoBaseDownload
 import pandas as pd
-from google_drive_client import get_drive_client
+from utils.google_drive_client import get_drive_client
 
 load_dotenv()
 
@@ -52,6 +54,29 @@ def download_csv_data(service, local_path):
         done = False
         while not done:
             _, done = downloader.next_chunk()
+
+def _cp1252_fallback(err):
+    bad_bytes = err.object[err.start:err.end]
+    return bad_bytes.decode("cp1252", errors="replace"), err.end
+
+codecs.register_error("cp1252_fallback", _cp1252_fallback)
+
+def load_csv_from_drive(service):
+    data_file = get_datafile(service)
+
+    if not data_file["capabilities"]["canDownload"]:
+        raise PermissionError(f"File cannot be downloaded: {data_file['name']}")
+
+    request = service.files().get_media(fileId=data_file["id"])
+    buffer = io.BytesIO()
+    downloader = MediaIoBaseDownload(buffer, request)
+
+    done = False
+    while not done:
+        _, done = downloader.next_chunk()
+
+    text = buffer.getvalue().decode("utf-8", errors="cp1252_fallback")
+    return pd.read_csv(io.StringIO(text))
 
 def load_csv_data(local_path: str) -> pd.DataFrame:
     return pd.read_csv(local_path)
