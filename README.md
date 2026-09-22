@@ -12,8 +12,7 @@ Project overview here
 |------------------|---------------|--------------------------------------------------------------------------|
 | Anna Sehgal    | @annasehgal | Data collection, Data preprocessing, Data handling for missing values and outliers, feature engineering, overall project coordination, documentation for decisions            |
 | Zasha Benites   | @zm-michelle    | Feature engineering, exploratory data analysis (EDA), documentation, visualization and summary  |
-| Jake Park     | @jakeparkbuilds | Feature engineering, data validation, Categorization and normalization of variables                |
-| Priya Rana     | @       | TBD  |
+
 ---
 
 ## 🎯 **Project Highlights**
