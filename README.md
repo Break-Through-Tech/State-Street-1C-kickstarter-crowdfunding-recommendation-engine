@@ -10,7 +10,7 @@ Project overview here
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|---------------|--------------------------------------------------------------------------|
-| Anna Sehgal    | @annasehgal | Data collection, Data preprocessing, Data handling for missing values and outliers, feature engineering, overall project coordination, documentation for decisions            |
+| Anna Sehgal    | @annasehgal | Data collection, Data preprocessing, Data handling for missing values and outliers, feature engineering, overall project coordination, documentation for decisions, data validation, Categorization and normalization of variables             |
 | Zasha Benites   | @zm-michelle    | Feature engineering, exploratory data analysis (EDA), documentation, visualization and summary  |
 
 ---
